@@ -78,7 +78,7 @@ class Scanner {
         }
     
         if (isAtEnd()) {
-          lox.error(line, "Unterminated string.");
+          //Lox.error(line, "Unterminated string.");
           return;
         }
 
@@ -179,10 +179,7 @@ class Scanner {
                     number(); 
                 } else if (isAlpha(c)){
                     identifier(); 
-                } else {
-                    //report error if we read in an unrecognized token 
-                    lox.error(line, "Unexpected character.");
-                }
+                } 
                 break;
         }
     }
